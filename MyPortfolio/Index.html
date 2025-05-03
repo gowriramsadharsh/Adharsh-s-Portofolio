@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Techylearner's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Toggle Switch -->
+  <!-- <div class="theme-toggle">
+    <label class="switch">
+      <input type="checkbox" id="toggleTheme"/>
+      <span class="slider"></span>
+    </label>
+  </div> -->
+  <!-- Toggle Switch with Icons -->
+<!-- <div class="theme-toggle">
+  <label class="switch">
+    <input type="checkbox" id="toggleTheme"/>
+    <span class="slider">
+      <!- <i class="fas fa-sun icon-sun">☀️</i>
+      <i class="fas fa-moon icon-moon"></i> -->
+    </span>
+  </label>
+</div> 
+
+
+  <div class="container">
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="toggleTheme"/>
+        <span class="slider">
+          <!-- <i class="fas fa-sun icon-sun">☀️</i>
+          <i class="fas fa-moon icon-moon"></i> -->
+        </span>
+      </label>
+    </div>
+    <section class="section">
+      <h1>Hi, I'm Adharsh</h1>
+      <p>Tech enthusiast new to AI and ML 🤖, eager to learn and master these fields 📚. Driven to understand algorithms and data 📊, aiming to excel in the evolving world of technology 🚀</p>
+    </section>
+
+    <section class="section">
+      <h2>Experience</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Associate Software Developer</h3>
+          <p><strong>Company:</strong> Accenture</p>
+          <p><strong>Duration:</strong> Nov 2024 – Present</p>
+          <p><strong>Responsibilities:</strong></p>
+          <ul>
+            <li>Built .NET applications</li>
+            <li>Worked on SQL Server</li>
+            <li>Collaborated in Agile teams</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Java Trainee</h3>
+          <p><strong>Company:</strong> Kodnest</p>
+          <p><strong>Duration:</strong> Nov 2024 – Present</p>
+          <p><strong>Responsibilities:</strong></p>
+          <ul>
+            <li>Write, test, debug Java code</li>
+            <li>Attend training</li>
+            <li>Support documentation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <span class="skill">HTML</span>
+          <span class="skill">CSS</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">Java</span>
+          <span class="skill">.NET</span>
+          <span class="skill">SQL</span>
+          <span class="skill">Git</span>
+          <span class="skill">Chrome Extensions</span>
+          <span class="skill">REST API</span>
+          <span class="skill">AI & ML Basics</span>
+        </div>
+      </section>
+
+    <section class="section">
+      <h2>My Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="Screenshot 2025-04-05 132109.png" alt="PDF Project"/>
+          <p><strong>Text to PDF convert Chrome Extension</strong></p>
+          <a href="https://t.co/ARcKqq3hYf" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <footer class="footer">
+      <div class="footer-container">
+        <p>&copy; 2025 Adharsh. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="mailto:adharshgowrirams@gmail.com">Contact</a>
+          <a href="https://github.com/gowriramsadharsh" target="_blank">GitHub</a>
+          <a href="https://x.com/LearnTekky" target="_blank">Twitter (X)</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const toggle = document.getElementById("toggleTheme");
+    const body = document.body;
+
+    function applyTheme(theme) {
+      if (theme === "light") {
+        body.classList.add("light-mode");
+      } else {
+        body.classList.remove("light-mode");
+      }
+    }
+
+    toggle.addEventListener("change", () => {
+      const theme = toggle.checked ? "dark" : "light";
+      localStorage.setItem("theme", theme);
+      applyTheme(theme);
+    });
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem("theme") || "dark";
+      toggle.checked = savedTheme === "dark";
+      applyTheme(savedTheme);
+    });
+  </script>
+</body>
+</html>
